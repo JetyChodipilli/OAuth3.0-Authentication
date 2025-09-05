@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    width: 400px;
+}
+
+.login-container h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.login-container p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.logout-message {
+    color: #28a745;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Custom Google Login Button Styling */
+.login-with-google-btn {
+    background-color: #4285f4; /* Google's blue color */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.login-with-google-btn:hover {
+    background-color: #357abd; /* Darker blue on hover */
+}</style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Welcome</h1>
+        <p>Please sign in to continue</p>
+
+        <!-- Display logout success message if present -->
+        <div th:if="${param.logout}" class="logout-message">
+            You have been logged out successfully.
+        </div>
+
+        <!-- Form for Google OAuth2 Login -->
+        <form action="/oauth2/authorization/google" method="GET">
+        <button type="submit" class="login-with-google-btn">
+    <img src="https://www.google.com/favicon.ico" alt="Google Icon" style="width: 20px; vertical-align: middle; margin-right: 10px;">
+    Sign in with Google
+</button>
+  </form>
+    </div>
+</body>
+</html>

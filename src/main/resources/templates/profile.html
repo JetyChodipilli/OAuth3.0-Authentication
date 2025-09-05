@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        /* CSS for centering and styling the card */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            margin: 10px 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .card p {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .card p.email {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- User's profile photo -->
+        <img th:src="${photo}" alt="Profile Photo" th:onerror="this.src='https://via.placeholder.com/120'">
+
+        <!-- User's name -->
+        <h2 th:text="${name}">User Name</h2>
+
+        <!-- User's email -->
+        <p class="email" th:text="${email}">user@example.com</p>
+    </div>
+</body>
+</html>
