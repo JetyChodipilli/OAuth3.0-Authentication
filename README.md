@@ -121,9 +121,9 @@ After login, you’ll be redirected to `/profile`.
 
 ## 🧾 Templates
 
-- `welcome.html` — Home page  
-- `login_page.html` — OAuth2 login initiation  
-- `profile.html` — Displays user name, email, and profile picture
+- `welcome.jsp` — Home page  
+- `login_page.jsp` — OAuth2 login initiation  
+- `profile.jsp` — Displays user name, email, and profile picture
 
 ---
 
