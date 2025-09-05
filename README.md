@@ -54,7 +54,7 @@ src/
 - Maven 3.6+  
 - Spring Boot 3.x  
 - OAuth2 Provider (e.g., Google)  
-- Thymeleaf  
+- Thymeleaf / JSP 
 - Servlet container (e.g., Apache Tomcat) for WAR deployment
 
 ---
